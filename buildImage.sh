@@ -32,13 +32,17 @@ if [ -z "$password" ]; then echo "Password invalid";exit 1;fi
 if [ -z "$serveripaddress" ]; then serveripaddress="127.0.0.0";fi
 if [ -z "$servername" ]; then echo "Server name invalid";exit 1;fi
 if [ -z "$serverregion" ]; then echo "Server region invalid";exit 1;fi
-if [ "$serverlistonpastats" != "y" ] || [ "$serverlistonpastats" != "n" ]; then echo "List on PAstats invalid please choose \"y\" or \"n\"";exit 1;fi
+if [ "$serverlistonpastats" == "y" ] || [ "$serverlistonpastats" == "n" ]
+	then echo Config parameter ok
+else 
+	echo "List on PAstats invalid please choose \"y\" or \"n\"";exit 1
+fi
 if [ "$serverlistonpastats" == "y" ]; then serverlistonpastats="true";fi
 if [ "$serverlistonpastats" == "n" ]; then serverlistonpastats="false";fi
 
 # Update conf files
 sed -i "s/pauser_to_replace/$user/" auth_papatcher.sh
-sed -i "s/papassword/$password/" auth_papatcher.sh
+sed -i "s/papassword_to_replace/$password/" auth_papatcher.sh
 
 
 sed -i "s/server_name_to_replace/$servername/" NodePAMaster_conf.json
