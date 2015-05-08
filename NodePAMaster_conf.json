@@ -1,7 +1,7 @@
 {
-        "server": "./.local/Uber\ Entertainment/Planetary\ Annihilation/stable/server",
-        "serverversion": "./.local/Uber\ Entertainment/Planetary\ Annihilation/stable/version.txt",
-        "serverparams": ["--headless", "--game-mode", "Config", "--allow-lan","--server-name", "DedicatedServerByPAStats"],
+        "server": "./.local/Uber Entertainment/Planetary Annihilation/stable/server",
+        "serverversion": "./.local/Uber Entertainment/Planetary Annihilation/stable/version.txt",
+        "serverparams": ["--headless", "--game-mode", "Config", "--allow-lan","--server-name", "DedicatedPAServers"],
         "pastats": "176.31.115.99",
         "pastatsport": 80,
         "listonpastats": true,
