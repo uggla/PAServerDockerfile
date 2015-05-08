@@ -26,6 +26,6 @@ wget http://nanodesu.info/stuff/pa/mods/NodePAMaster.zip && \
 wget https://dl.dropboxusercontent.com/u/28565393/Planetary%20Annihilation/colours/color_table.js
 RUN chmod +x /home/pa/auth_papatcher.sh && \
 chmod +x /home/pa/papatcher.go && \
-unzip /home/pa/NodePAMaster.zip
-#/home/pa/auth_papatcher.sh && \
-#cp color_table.js ./.local/Uber\ Entertainment/Planetary\ Annihilation/stable/media/server-script/lobby/color_table.js && \
+unzip /home/pa/NodePAMaster.zip && \
+/home/pa/auth_papatcher.sh && \
+cp color_table.js ./.local/Uber\ Entertainment/Planetary\ Annihilation/stable/media/server-script/lobby/color_table.js
