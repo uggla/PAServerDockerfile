@@ -36,4 +36,5 @@ RUN cp color_table.js ./.local/Uber\ Entertainment/Planetary\ Annihilation/stabl
 chmod +x /home/pa/update_conf_file.sh && \
 /home/pa/update_conf_file.sh
 RUN cp /home/pa/NodePAMaster_conf.json /home/pa/NodePAMaster/src/conf.json
+RUN rm /home/pa/auth_papatcher.sh
 ENTRYPOINT ["node.js", "./NodePAMaster/src/control.js"]
