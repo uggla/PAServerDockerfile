@@ -1,6 +1,6 @@
 FROM ubuntu:vivid
 MAINTAINER uggla@free.fr
-LABEL PAServer
+LABEL name=PAServer
 LABEL version="1.0" description="PAServer in docker. Port used 20545"
 EXPOSE 20545
 ENV DEBIAN_FRONTEND noninteractive
@@ -37,4 +37,4 @@ chmod +x /home/pa/update_conf_file.sh && \
 /home/pa/update_conf_file.sh
 RUN cp /home/pa/NodePAMaster_conf.json /home/pa/NodePAMaster/src/conf.json
 RUN rm /home/pa/auth_papatcher.sh
-ENTRYPOINT ["node.js", "./NodePAMaster/src/control.js"]
+ENTRYPOINT ["/usr/bin/nodejs", "./NodePAMaster/src/control.js"]

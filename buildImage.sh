@@ -55,6 +55,5 @@ sed -i "/serverip/ s/127\.0\.0\.1/$serveripaddress/" NodePAMaster_conf.json
 sed -i "/listonpastats/ s/true/$serverlistonpastats/" NodePAMaster_conf.json
 
 
-
-#sudo docker build --rm=true .
-sudo docker build .
+if [ $1 = "nobuild" ]; then exit 0;fi
+sudo docker build --rm=true .
