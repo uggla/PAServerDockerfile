@@ -55,7 +55,7 @@ sed -i "/serverip/ s/127\.0\.0\.1/$serveripaddress/" NodePAMaster_conf.json
 sed -i "/listonpastats/ s/true/$serverlistonpastats/" NodePAMaster_conf.json
 
 
-if [ $1 = "nobuild" ]; then exit 0;fi
+if [ "$1" == "nobuild" ]; then exit 0;fi
 sudo docker build --rm=true -t "uggla/passerver" .
 paversion=$(sudo docker run -ti --rm --entrypoint="/bin/cat" uggla/paserver:latest .local/Uber\ Entertainment/Planetary\ Annihilation/stable/version.txt)
 echo "Tag image with version : $paversion"
