@@ -3,7 +3,8 @@ PAServerDockerfile
 
 Dockerfile to build images for Planetary Annihilation Servers.
 
-Note : this project is an early stage. Please report any issue to github bug tracker.
+Note : this project is in an early stage. Please report any issue or comment to github bug tracker :
+https://github.com/uggla/PAServerDockerfile/issues
 
 PAServer documentation source
 -----------------------------
@@ -23,13 +24,21 @@ Prerequisites
 * Update sudoers to avoid enter your password each time (optional).
  
 
-Build instructions
-------------------
+Building instructions
+---------------------
 # Clone the repo with git.
 # Change directory to the repository and run buildImage.sh.
-# Answer the script questions.
+# Answer script questions.
+Have a coffee. Image is ~5 GB, so time for building depends from your internet bandwidth.
 
 
-Run instructions
-----------------
+Running instructions
+--------------------
+Run a container to start pa server.
+Attach
+
+Stop
+
+Modifying image content
+-----------------------
 
