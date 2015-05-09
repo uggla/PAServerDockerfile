@@ -2,8 +2,9 @@ PAServerDockerfile
 ==================
 Dockerfile to build images for Planetary Annihilation Servers.
 
-Note : this project is in an early stage. Please report any issue or comment to github bug tracker :
-https://github.com/uggla/PAServerDockerfile/issues
+:Note: This project is in an early stage.
+   Please report any issue or comment to github bug tracker :
+   https://github.com/uggla/PAServerDockerfile/issues
 
 
 PAServer documentation source
@@ -13,7 +14,7 @@ PA server installation procedure is available at `EXODUS ESPORTS <http://exoduse
 The dockerfile will try to automate and produce a system configuration similar as the above procedure.
 
 
-Variation from the initial procedure :
+Variations from the initial procedure :
 
 
 - Installation uses a docker image to easily deploy new servers and improve security.
@@ -42,6 +43,7 @@ Building instructions
  git clone git@github.com:uggla/PAServerDockerfile.git
 2. Change directory to the repository and run buildImage.sh.
  cd PAServerDockerfile
+ 
  ./buildImage.sh
 3. Answer script questions.
 
@@ -52,6 +54,7 @@ Building instructions
    - Enter Server Region --> server region as it will appear in the lobby
    - List on PAstats (y/n)  --> yes if you want to see your server advertised in PA lobby
 
+
  
 4. Time to have a coffee. Image is ~5 GB, so time for building depends from your internet connection.
 
@@ -61,11 +64,29 @@ Running instructions
 - Run a container to start pa server.
  docker run -ti -d --name=paserver -p 20545:20545 uggla/paserver
 
-Attach to the container console to show logs.
- 
+- Show running container
 
-Stop your server.
+ [uggla@uggla PAServerDockerfile]$ docker ps
+ ::
+    CONTAINER ID        IMAGE                   COMMAND                CREATED             STATUS              PORTS                      NAMES
+    6f43c00fea2d        uggla/paserver:latest   "/usr/bin/nodejs ./N   5 hours ago         Up 9 seconds        0.0.0.0:20545->20545/tcp   paserver            
+
+
+
+- Start an already existing container.
+ docker start paserver
+ 
+- Attach to the container console to show logs.
+ docker attach paserver
+ 
+ ctrl p ctrl q to detach from container.
+
+- Stop your server.
  docker stop paserver
 
 Modifying container content
 ---------------------------
+- You can edit the container to modify options.
+ sudo docker run -u root --entrypoint="/bin/bash" -ti --name "paserver" uggla/paserver
+ 
+
