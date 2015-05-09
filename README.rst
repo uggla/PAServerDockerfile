@@ -2,7 +2,8 @@ PAServerDockerfile
 ==================
 Dockerfile to build images for Planetary Annihilation Servers.
 
-:Note: This project is in an early stage.
+:Note: This project is in an **early stage**.
+
    Please report any issue or comment to github bug tracker :
    https://github.com/uggla/PAServerDockerfile/issues
 
