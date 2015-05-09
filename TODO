@@ -1,3 +1,4 @@
 TODO List :
 
-- Improve buildImage.sh inpur error checking
+- Improve buildImage.sh input error checking.
+- Add color selection.
