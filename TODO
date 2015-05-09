@@ -2,3 +2,6 @@ TODO List :
 
 - Improve buildImage.sh input error checking.
 - Add color selection.
+- Add MAX_PLAYERS and MAX_SPECTATORS config parameters.
+- Manage replays.
+- Manage password protected server.
