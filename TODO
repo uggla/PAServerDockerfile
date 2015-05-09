@@ -1,6 +1,3 @@
 TODO List :
 
-- Remove auth_papatcher.sh from image
-- Request credentials and ip at build startup
-- Request also region and server name
-- Request listen on pastat
+- Improve buildImage.sh inpur error checking
