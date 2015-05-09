@@ -5,3 +5,4 @@ TODO List :
 - Add MAX_PLAYERS and MAX_SPECTATORS config parameters.
 - Manage replays.
 - Manage password protected server.
+- Evaluate possible warning or auto update if PA server version changed.
