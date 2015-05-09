@@ -12,10 +12,10 @@ PA server installation procedure is available at `EXODUS ESPORTS <http://exoduse
 
 The dockerfile will try to automate and produce a system configuration similar as the above procedure.
 
-* Variation from the initial procedure
-** Installation in a docker image to easily deploy new servers and improve security.
-** Operating system changed to latest Ubuntu image 15.04 (Vivid Vervet), intead of 14.04 (Trusty Tahr).
-** Image use colors from 
+Variation from the initial procedure :
+* Installation in a docker image to easily deploy new servers and improve security.
+* Operating system changed to latest Ubuntu image 15.04 (Vivid Vervet), intead of 14.04 (Trusty Tahr).
+* Image use colors from 
 
 
 Prerequisites
@@ -39,6 +39,6 @@ Attach
 
 Stop
 
-Modifying image content
------------------------
+Modifying container content
+---------------------------
 
