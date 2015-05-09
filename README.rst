@@ -11,7 +11,7 @@ PAServer documentation source
 -----------------------------
 PA server installation procedure is available at `EXODUS ESPORTS <http://exodusesports.com/guides/planetary-annihilation-dedicated-server-setup>`_.
 
-The dockerfile will try to automate and produce a system configuration similar as the above procedure.
+The dockerfile will try to automate and produce a system configuration similar as the result of above procedure.
 
 
 Variations from the initial procedure :
@@ -19,7 +19,7 @@ Variations from the initial procedure :
 
 - Installation uses a docker image to easily deploy new servers and improve security.
 - Operating system changed to latest Ubuntu image 15.04 (Vivid Vervet), instead of 14.04 (Trusty Tahr).
-- Image use colors produced by burntcustard by default.
+- Image uses colors produced by burntcustard by default.
 
 
 Prerequisites
@@ -27,14 +27,17 @@ Prerequisites
 - Install docker.
  Example :
  sudo apt-get install docker.io
+ 
  or
+ 
  yum install docker.io
-- Add a rule into /etc/sudoers to avoid enter your password each time (optional).
+- Add a rule into /etc/sudoers to avoid entering your password each time (optional).
  user	ALL=(ALL)	NOPASSWD: /usr/bin/sudo
-- Add an alias to your .bashrc not enter sudo each time (optional).
+- Add an alias to your .bashrc not enter your sudo password each time (optional).
  Alias docker=”sudo docker”
 - Open port **20545** on your server firewall. Do not forget your firewall router, if you have one in between. 
  Example with firewalld :
+ 
  firewall-cmd --add-port 20545/tcp
  
 Building instructions
@@ -79,7 +82,7 @@ Running instructions
 - Attach to the container console to show logs.
  docker attach paserver
  
- ctrl p ctrl q to detach from container.
+ Note : ctrl p ctrl q to detach from container.
 
 - Stop your server.
  docker stop paserver
