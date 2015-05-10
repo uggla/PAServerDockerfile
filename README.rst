@@ -27,10 +27,18 @@ Variations from the initial procedure :
 Prerequisites
 -------------
 - Use your regular user to build the image.
-- Recent docker, image was successfully built on Fedora 21
- [uggla@uggla ~]$ docker --version
- ::
-    Docker version 1.6.0, build 350a636/1.6.0
+- Recent docker, image was successfully built on :
+
+    - Fedora 21
+    docker --version
+    ::
+       Docker version 1.6.0, build 350a636/1.6.0
+ 
+   
+    - Ubuntu 15.04 with some minor defects_.
+    docker --version
+    ::
+       Docker version 1.5.0, build a8a31ef
 
 - Install docker.
  Example :
@@ -100,3 +108,11 @@ Modifying container content
 - You can edit the container to modify options.
  sudo docker run -u root --entrypoint="/bin/bash" -ti --name "paserver" uggla/paserver
  
+Ubuntu 15.04 minor defects
+--------------------------
+.. _defects:
+
+- Warnings are displayed about label.
+ # Skipping unknown instruction LABEL
+ 
+- Papatcher does not display progress
