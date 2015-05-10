@@ -27,6 +27,11 @@ Variations from the initial procedure :
 Prerequisites
 -------------
 - Use your regular user to build the image.
+- Recent docker, image was successfully built on Fedora 21
+ [uggla@uggla ~]$ docker --version
+ ::
+    Docker version 1.6.0, build 350a636/1.6.0
+
 - Install docker.
  Example :
  sudo apt-get install docker.io
