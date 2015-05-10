@@ -46,7 +46,7 @@ Prerequisites
 Building instructions
 ---------------------
 1. Clone the repo with git.
- git clone git@github.com:uggla/PAServerDockerfile.git
+ git clone https://github.com/uggla/PAServerDockerfile.git
 2. Change directory to the repository and run buildImage.sh.
  cd PAServerDockerfile
  
