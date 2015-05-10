@@ -36,8 +36,8 @@ Prerequisites
        Docker version 1.6.0, build 350a636/1.6.0
  
    
-    - Ubuntu 15.04 with some minor defects_.
-    
+  - Ubuntu 15.04 with some minor defects_.
+   
     docker --version
     ::
        Docker version 1.5.0, build a8a31ef
