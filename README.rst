@@ -29,7 +29,7 @@ Prerequisites
 - Use your regular user to build the image.
 - Recent docker, image was successfully built on :
 
-   - Fedora 21
+  - Fedora 21
    
     docker --version
     ::
