@@ -48,7 +48,7 @@ Prerequisites
  
  or
  
- sudo yum install docker.io
+ sudo yum install docker-io
 - Add a rule into /etc/sudoers to avoid entering your password each time (optional).
  <user-name>	ALL=(ALL)	NOPASSWD: /usr/bin/sudo
 - Add an alias to your .bashrc not enter your sudo password each time (optional).
