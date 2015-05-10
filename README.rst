@@ -118,4 +118,4 @@ Ubuntu 15.04 minor defects
 - Warnings are displayed about label.
  # Skipping unknown instruction LABEL
  
-- Papatcher does not display progress
+- Papatcher does not display progress.
