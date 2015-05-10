@@ -7,5 +7,5 @@
 /^var getAIName/ i \
 
 # Update parameters
-s/var MAX_PLAYERS = [0-9]\+/MAX_PLAYERS = 16/
-s/var MAX_SPECTATOR = [0-9]\+/MAX_SPECTATOR = 5/
+s/var MAX_PLAYERS = [0-9]\+/var MAX_PLAYERS = 16/
+s/var MAX_SPECTATORS = [0-9]\+/var MAX_SPECTATORS = 5/
