@@ -29,13 +29,15 @@ Prerequisites
 - Use your regular user to build the image.
 - Recent docker, image was successfully built on :
 
-    - Fedora 21
+   - Fedora 21
+   
     docker --version
     ::
        Docker version 1.6.0, build 350a636/1.6.0
  
    
     - Ubuntu 15.04 with some minor defects_.
+    
     docker --version
     ::
        Docker version 1.5.0, build a8a31ef
@@ -91,7 +93,6 @@ Running instructions
     6f43c00fea2d        uggla/paserver:latest   "/usr/bin/nodejs ./N   5 hours ago         Up 9 seconds        0.0.0.0:20545->20545/tcp   paserver            
 
 
-
 - Start an already existing container.
  docker start paserver
  
@@ -103,10 +104,12 @@ Running instructions
 - Stop your server.
  docker stop paserver
 
+
 Modifying container content
 ---------------------------
 - You can edit the container to modify options.
  sudo docker run -u root --entrypoint="/bin/bash" -ti --name "paserver" uggla/paserver
+ 
  
 Ubuntu 15.04 minor defects
 --------------------------
