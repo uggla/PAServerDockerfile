@@ -35,6 +35,7 @@ unzip /home/pa/NodePAMaster.zip && \
 RUN cp color_table.js ./.local/Uber\ Entertainment/Planetary\ Annihilation/stable/media/server-script/lobby/color_table.js && \
 chmod +x /home/pa/update_conf_file.sh && \
 ls -al /home/pa/update_conf_file.sh && \
+sleep 5s && \
 /home/pa/update_conf_file.sh
 RUN cp /home/pa/NodePAMaster_conf.json /home/pa/NodePAMaster/src/conf.json
 RUN rm /home/pa/auth_papatcher.sh
