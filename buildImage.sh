@@ -50,7 +50,7 @@ sed -i "s/papassword_to_replace/$password/" auth_papatcher.sh
 
 
 sed -i "s/server_name_to_replace/$servername/" NodePAMaster_conf.json
-sed -i "s/region_to_replace/$serverregion/" NodePAMaster_conf.json
+sed -i "s#region_to_replace#$serverregion#" NodePAMaster_conf.json
 sed -i "/serverip/ s/127\.0\.0\.1/$serveripaddress/" NodePAMaster_conf.json
 sed -i "/listonpastats/ s/true/$serverlistonpastats/" NodePAMaster_conf.json
 
