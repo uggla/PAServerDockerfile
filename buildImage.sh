@@ -56,7 +56,8 @@ sed -i "/listonpastats/ s/true/$serverlistonpastats/" NodePAMaster_conf.json
 
 
 if [ "$1" == "nobuild" ]; then exit 0;fi
-sudo docker build --rm=true -t "uggla/paserver" .
+if [ "$1" == "debug" ]; then REMOVE_INTERMEDIATE_IMG=false;else REMOVE_INTERMEDIATE_IMG=true;fi
+sudo docker build --rm=$REMOVE_INTERMEDIATE_IMG -t "uggla/paserver" .
 paversion=$(sudo docker run -ti --rm --entrypoint="/bin/cat" uggla/paserver:latest .local/Uber\ Entertainment/Planetary\ Annihilation/stable/version.txt | sed 's/\s//g')
 echo "Tag image with version : $paversion"
 sudo docker tag uggla/paserver:latest uggla/paserver:$paversion

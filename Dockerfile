@@ -11,17 +11,20 @@ apt-get install -y nodejs && \
 apt-get install -y wget && \
 apt-get install -y vim && \
 apt-get install -y unzip && \
+apt-get install -y patch && \
 apt-get install -y libgl1-mesa-glx
-RUN useradd -k /etc/skel -m pa 
+RUN useradd -k /etc/skel -m pa
 COPY auth_papatcher.sh /home/pa/auth_papatcher.sh
 COPY NodePAMaster_conf.json /home/pa/NodePAMaster_conf.json
 COPY update_conf_file.sh /home/pa/update_conf_file.sh
 COPY runServer.sh /home/pa/runServer.sh
+COPY mikeyh_lobby.patch /home/pa/mikeyh_lobby.patch
 COPY *.sed /home/pa/
 RUN chown pa:pa /home/pa/auth_papatcher.sh && \
 chown pa:pa /home/pa/update_conf_file.sh && \
 chown pa:pa /home/pa/runServer.sh && \
 chown pa:pa /home/pa/NodePAMaster_conf.json && \
+chown pa:pa /home/pa/mikeyh_lobby.patch && \
 chown pa:pa /home/pa/*.sed
 USER pa
 WORKDIR /home/pa
